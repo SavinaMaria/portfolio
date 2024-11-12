@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin: 0 auto; /*Убираем внешние отступы у документа*/
+    padding: 0;
+    font-family: "Source Sans 3", sans-serif; /*Применяем подключенный шрифт*/
+}
+
+
+/*_________________ HEADER _________________*/
+header {
+    width: 90%; /*Ширина блока*/
+    padding: 25px 0; /*Внутренние отступы сверху и снизу*/
+    /*Размещаем элементы блока в несколько строк с равными отступами*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.logo-header {
+    /*Позиционируем логотип*/
+    margin-right: 50%;
+    float: left;
+}
+/*Стилизуем номер телефона и почту*/
+header p span{
+    display: block;
+    color: #607CE6;
+    font-size: 20px;
+    font-weight: 600;
+}
+header p, span{
+    text-align: right;
+}
+
+header nav {
+    width: 100%;
+    /*Добавляем отступы сверху*/
+    margin-top: 15px;
+    padding-top: 25px;
+    border-top: 1px solid #888888; /*Добавляем линию сверху шириной 1px*/
+    /*Размещаем пункты меню в строку*/
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul {
+    /*Позиционируем элементы списка*/
+    display: flex;
+    width: 80%;
+    margin-right: 6%;
+    /*Убираем отступы слева, созданные маркерами списка*/
+    padding-left: 0;
+    margin-left: 0;
+    list-style: none; /*Убираем маркеры у элементов списка*/
+}
+header nav a { 
+    /*Стилизуем кнопку "Перезвоните мне"*/
+    color: #607CE6; 
+    text-decoration: none;
+}
+ul li a {
+    /*Убираем выделение у ссылок*/
+    color: #333; 
+    text-decoration: none;
+}
+
+
+/*__________________ MAIN __________________*/
+/*Задаем основные стили страницы*/
+main {
+    width: 90%;
+}
+h1 {
+    font-size: 60px;
+    margin: 0;
+    width: 35vw;
+}
+h2 {
+    padding: 20px 0;
+    font-size: 48px;
+}
+h3 {
+    font-size: 28px;   
+}
+
+.banner {
+    padding: 40px 0;/*Внутренние отступы сверху и снизу*/
+    /*Меняем свойство display для группировки дочерних элементов*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.banner p {
+    padding-top: 20px;/*Отступ сверху*/
+    width: 25%;/*Ширина блока с текстом*/
+}
+.banner img {
+    width: 100%;/*Изображение растягивается на всю ширину родительского блока*/
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 44vw 44vw;/*2 столбца шириной 44vw*/
+    gap: 3% 1vw; /*Отступы между дочерними элементами*/
+    margin-bottom: 50px;/*Отступ снизу 50px*/
+}
+.grid img {
+    width: 100%;/*Изображение растягивается на всю ширину родительского блока*/
+}
+
+.column {
+    margin: 0;/*Обнуляем margin, тем самым отменяем свойство margin:auto*/
+    width: 23%;/*Ширина блока*/
+    margin-bottom: 30px;/*Внешний отступ снизу*/
+    padding: 50px;/*Внутренние отступы по бокам*/
+    background-color: #f5f5f5;/*Цвет фона*/
+}
+.column .image-container {
+    height: 300px;/*Высота 300px*/
+}
+.column img {
+    width: 70%;/*Ширина изображения - 70% от ширины родительского блока*/
+}
+.column a {
+    text-decoration: none;/*Убираем выделение текста*/
+    color: #607CE6;/*Цвет шрифта*/
+    font-size: 20px;/*Размер шрифта*/
+    padding-top: 35px;/*Внутренний отступ сверху*/
+}
+/*анимация при наведении на ссылку*/
+.column a:hover {
+    transition: 1s;/*в течение 1 секунды*/
+    color: #242f58;/*изменить цвет текста на #242f58*/
+}
+.map {
+    width: 100%;
+}
+
+
+/*_________________ FOOTER _________________*/
+footer {
+    background-color: #333;/*цвет фона*/
+    color: #fff;/*цвет шрифта*/
+    padding: 3% 5%;/*внутренние отступы*/
+}
+
+.wrap {
+    display: flex;/*меняем значение display для группировки дочерних элементов*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 0;/*Обнуляем margin, тем самым отменяем свойство margin:auto*/
+    padding-right: 30vw;/*Внутренний отступ справа*/
+    width: 180px;/*Ширина блока*/
+}
+footer ul{
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw;/*3 столбца шириной 10vw*/
+    grid-template-rows: repeat(4, 35px);/*4 строки высотой 35px*/
+    gap: 1% 10%; /*Отступы между дочерними элементами*/
+}
+footer ul li {
+    width: 10vw;/*ширина элемента меню*/
+    list-style: none;/*убираем стилизацию списка*/
+}
+footer ul li a {
+    color: #fff;/*цвет шрифта*/
+}
+
+footer p {
+    width: 100%;/*ширина блока с текстом*/
+    padding-top: 50px;/*внутренний отступ сверху*/
+    text-align: center;/*размещаем текст по центру*/
+}
+
+@media (max-width: 1440px) { 
+    body {
+        font-size: 1em;
+    }
+    header nav ul {
+    margin-right: 0;
+    }
+    .logo-header {
+        margin-right: 20%;
+    }
+}
+@media (max-width: 1024px) {
+    .logo-header {
+        /*Позиционируем логотип*/
+        margin-right: 14%;
+    }
+    header nav ul {
+        /*Позиционируем элементы списка*/
+        display: block;
+        width: 70%;
+    }
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 2em;
+    }
+    header {
+        display: block;
+    }
+    .logo-header {
+        width: 40vw;
+    }
+    header nav {
+        display: block;
+    }
+    header p span{
+        font-size: 1em;
+        padding-bottom: 0.5em;
+    }
+}
+@media (max-width: 576px) {
+    .logo-header {
+        width: 87vw;
+        margin-right: 0;
+        padding-bottom: 1em;
+    }
+    .contacts {
+        display: inline-block;
+        width: 100%;
+    }
+}
+  
+  
+.block {}
+.block__elem1 {}
+.block__elem2 {}
+.block__elem3 {}
+
+  
+
